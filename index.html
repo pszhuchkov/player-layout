@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="static/fontawesome-free-5.15.2-web/css/all.css">
   <style type="text/css">
-    .player-widget {
+    .player {
       width: 800px;
       height: 600px;
       box-shadow: 0 0 10px rgba(0,0,0,0.5);
@@ -15,11 +15,11 @@
     .video-container {
       flex-grow: 1;
     }
-    .buttons {
+    .bottom-controls {
       background: black;
       display: flex;
     }
-    button {
+    .player-button {
       border-style: none;
       color: white;
       background-color: transparent;
@@ -30,21 +30,25 @@
       width: 30px;
       height: 30px;
     }
-    .empty_div {
+    .viewing-panel {
       flex-grow: 1;
     }
   </style>
 </head>
 <body>
-  <div class="player-widget" id="player">
+  <div class="player" id="player">
     <div class="js-video-container video-container"></div>
-    <div class="buttons">
-      <button class="js-play-button"><i class="fas fa-play"></i></button>
-      <button class="js-pause-button"><i class="fas fa-pause"></i></button>
-      <button class="js-mute-button"><i class="fas fa-volume-up"></i></button>
-      <button class="js-volume-button"><i class="fas fa-volume-mute"></i></button>
-      <div class="empty_div"></div>
-      <button class="js-fullscreen-button"><i class="fas fa-expand"></i></button>
+    <div class="bottom-controls">
+      <div class="left-buttons">
+        <button class="player-button js-play-button"><i class="fas fa-play"></i></button>
+        <button class="player-button js-pause-button"><i class="fas fa-pause"></i></button>
+        <button class="player-button js-mute-button"><i class="fas fa-volume-up"></i></button>
+        <button class="player-button js-volume-button"><i class="fas fa-volume-mute"></i></button>
+      </div>
+      <div class="viewing-panel"></div>
+      <div class="right-buttons">
+        <button class="player-button js-fullscreen-button"><i class="fas fa-expand"></i></button>
+      </div>
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
