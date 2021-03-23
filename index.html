@@ -5,14 +5,14 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="static/fontawesome-free-5.15.2-web/css/all.css">
   <style type="text/css">
-    #player {
+    .player-widget {
       width: 800px;
       height: 600px;
       box-shadow: 0 0 10px rgba(0,0,0,0.5);
       display: flex;
       flex-direction: column;
     }
-    .js-video-container {
+    .video-container {
       flex-grow: 1;
     }
     .buttons {
@@ -36,8 +36,8 @@
   </style>
 </head>
 <body>
-  <div id="player">
-    <div class="js-video-container"></div>
+  <div class="player-widget" id="player">
+    <div class="js-video-container video-container"></div>
     <div class="buttons">
       <button class="js-play-button"><i class="fas fa-play"></i></button>
       <button class="js-pause-button"><i class="fas fa-pause"></i></button>
