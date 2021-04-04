@@ -48,6 +48,30 @@
       color: white;
       font-family: 'Roboto', sans-serif;
     }
+    .viewing-progressbar {
+      flex-grow: 1;
+      background-color: grey;
+      margin: 7px;
+      height: 5px;
+      border-radius: 5px;
+      display: flex;
+    }
+    .progress-slider {
+      background-color: red;
+      height: 5px;
+    }
+    .current-time-dot {
+      height: 8px;
+      width: 8px;
+      background-color: red;
+      border-radius: 50%;
+      border-style: solid;
+      border-color: white;
+      border-width: 3px;
+      margin-top: -4px;
+      margin-left: -7px;
+      margin-right: -7px;
+    }
   </style>
 </head>
 <body>
@@ -64,10 +88,9 @@
         <div class="viewing-time time-label">
           <span class="js-current-time"></span>
         </div>
-        <div class="viewing-progressbar">
-<!--          <div class="js-progress progress-line" style="background-color: grey;">-->
-<!--            <div class="js-progress-slider" style="background-color: red;">Прогресс</div>-->
-<!--          </div>-->
+        <div class="js-progress viewing-progressbar">
+          <div class="js-progress-slider progress-slider"></div>
+          <span class="current-time-dot"></span>
         </div>
         <div class="video-duration time-label">
           <span class="js-duration"></span>
